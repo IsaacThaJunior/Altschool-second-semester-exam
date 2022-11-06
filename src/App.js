@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import Notfound from './components/NotFound';
+import Notfound from './components/404';
 import Home from './components/Home';
 const Repo = React.lazy(() => import('./components/Repos'));
 
@@ -23,7 +23,7 @@ function App() {
 				<Route
 					path="/repos"
 					element={
-						<React.Suspense fallback="LOADING......">
+						<React.Suspense fallback='Please Wait while the data loads'>
 							<Repo />
 						</React.Suspense>
 					}
